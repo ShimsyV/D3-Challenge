@@ -26,4 +26,13 @@ function makeResponsive() {
         .attr("width", svgWidth)
         .attr("border", border)
 
+    var borderpath = svg.append("rect")
+        .attr("x", 0)
+        .attr("y", 0)
+        .attr("height", svgHeight)
+        .attr("width", svgWidth)
+        .style("stroke", bordercolor)
+        .style("fill", "none")
+        .style("stroke-width", border);
+
 }
