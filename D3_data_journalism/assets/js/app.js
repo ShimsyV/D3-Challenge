@@ -18,6 +18,12 @@ function makeResponsive() {
     var border = 1;
     var bordercolor = 'black';
 
-
+    // Append SVG element
+    var svg = d3
+        .select("#scatter")
+        .append("svg")
+        .attr("height", svgHeight)
+        .attr("width", svgWidth)
+        .attr("border", border)
 
 }
