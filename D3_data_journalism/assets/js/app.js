@@ -95,6 +95,21 @@ function makeResponsive() {
             .attr("cy", d => yScale(d.healthcare))
             .attr("r", 10);
 
+        var label = chartGroup.append("g")
+            .attr("text-anchor", "middle")
+            .selectAll("text")
+            .data(healthData)
+            .enter()
+            .append("text")
+            .attr("class", "stateText")
+            .attr("x", d => xScale(d.poverty))
+            .attr("y", d => yScale(d.healthcare) * 1.00625)
+            .attr("font-size", 10)
+            .text(
+                d => d.abbr)
+            ;
+
+
 
 
 
