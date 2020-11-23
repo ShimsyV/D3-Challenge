@@ -60,6 +60,16 @@ function makeResponsive() {
             console.log(data)
         });
 
+        // Creating linear scale for X and Y
+
+        var xScale = d3.scaleLinear()
+            .domain([d3.min(healthData, d => d.poverty) / 1.35, d3.max(healthData, d => d.poverty) * 1.15])
+            .range([0, chartWidth]);
+
+        var yScale = d3.scaleLinear()
+            .domain([d3.min(healthData, d => d.healthcare) / 1.35, d3.max(healthData, d => d.healthcare) * 1.15])
+            .range([chartHeight, 0]);
+
 
 
     })
