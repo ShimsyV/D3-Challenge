@@ -15,4 +15,9 @@ function makeResponsive() {
     svgWidth = document.getElementById('scatter').clientWidth;
     svgHeight = svgWidth / 1.45;
 
+    var border = 1;
+    var bordercolor = 'black';
+
+
+
 }
