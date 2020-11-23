@@ -49,6 +49,19 @@ function makeResponsive() {
     var chartGroup = svg.append("g")
         .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
+    // Reading the data via d3
+    d3.csv("assets/data/data.csv").then(function (healthData) {
 
+        healthData.forEach(function (data) {
+
+            data.healthcare = +data.healthcare;
+            data.poverty = +data.poverty;
+
+            console.log(data)
+        });
+
+
+
+    })
 
 }
