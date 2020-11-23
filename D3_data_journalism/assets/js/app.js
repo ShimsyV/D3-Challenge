@@ -74,6 +74,14 @@ function makeResponsive() {
         var xAxis = d3.axisBottom(xScale).ticks(6);
         var yAxis = d3.axisLeft(yScale).ticks(6);
 
+        // append axes
+        chartGroup.append("g")
+            .attr("transform", `translate(0, ${chartHeight})`)
+            .call(xAxis);
+
+        chartGroup.append("g")
+            .call(yAxis);
+
 
 
     })
