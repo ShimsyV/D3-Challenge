@@ -42,4 +42,7 @@ function makeResponsive() {
         left: 50
     };
 
+    var chartHeight = svgHeight - margin.top - margin.bottom;
+    var chartWidth = svgWidth - margin.left - margin.right;
+
 }
