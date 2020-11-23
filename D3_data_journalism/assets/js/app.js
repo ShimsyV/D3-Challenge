@@ -82,6 +82,23 @@ function makeResponsive() {
         chartGroup.append("g")
             .call(yAxis);
 
+        //setting radius for the circles
+        var radius = 10
+
+        var circlesGroup = chartGroup.append("g")
+            .selectAll("circle")
+            .data(healthData)
+            .enter()
+            .append("circle")
+            .attr("class", "stateCircle")
+            .attr("cx", d => xScale(d.poverty))
+            .attr("cy", d => yScale(d.healthcare))
+            .attr("r", 10);
+
+
+
+
+
 
 
     })
