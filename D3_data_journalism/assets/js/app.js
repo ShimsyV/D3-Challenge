@@ -12,6 +12,7 @@ function makeResponsive() {
         svgArea.remove();
     }
 
-
+    svgWidth = document.getElementById('scatter').clientWidth;
+    svgHeight = svgWidth / 1.45;
 
 }
