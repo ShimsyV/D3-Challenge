@@ -70,6 +70,10 @@ function makeResponsive() {
             .domain([d3.min(healthData, d => d.healthcare) / 1.35, d3.max(healthData, d => d.healthcare) * 1.15])
             .range([chartHeight, 0]);
 
+        // Create the X and Y axes
+        var xAxis = d3.axisBottom(xScale).ticks(6);
+        var yAxis = d3.axisLeft(yScale).ticks(6);
+
 
 
     })
