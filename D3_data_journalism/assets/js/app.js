@@ -141,8 +141,10 @@ function makeResponsive() {
         //Create "mouseover" event listener to show tooltip
         circlesGroup.on("mouseover", function (d) {
             toolTip.show(d, this);
-
         })
+            .on("mouseout", function (d) {
+                toolTip.hide(d);
+            });
     })
 
 }
