@@ -95,6 +95,7 @@ function makeResponsive() {
             .attr("cy", d => yScale(d.healthcare))
             .attr("r", 10);
 
+        //Circles label
         var label = chartGroup.append("g")
             .attr("text-anchor", "middle")
             .selectAll("text")
@@ -108,6 +109,16 @@ function makeResponsive() {
             .text(
                 d => d.abbr)
             ;
+
+        // Create y axis labels
+        chartGroup.append("text")
+            .attr("transform", "rotate(-90)")
+            .attr("x", 0 - (chartHeight / 2) - 50)
+            .attr("y", 0 - margin.left)
+            .attr("dy", "1em")
+            .attr("class", "axisText")
+            .attr("font-weight", "Bold")
+            .text("Lacks Healthcare (%)");
 
 
 
