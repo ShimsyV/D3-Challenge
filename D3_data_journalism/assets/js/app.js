@@ -138,14 +138,13 @@ function makeResponsive() {
 
         chartGroup.call(toolTip);
 
+        //Create "mouseover" event listener to show tooltip
+        circlesGroup.on("mouseover", function (d) {
+            toolTip.show(d, this);
 
-
-
-
-
-
-
-
+        })
     })
 
 }
+
+makeResponsive();
