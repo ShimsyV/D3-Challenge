@@ -127,6 +127,16 @@ function makeResponsive() {
             .attr("font-weight", "bold")
             .text("In Poverty (%)");
 
+        // Creating tooltip
+        var toolTip = d3.tip()
+            .attr("class", "d3-tip")
+            .offset([80, 50])
+            .html(function (d) {
+                return (`${d.state}<br>Poverty: ${d.poverty}%
+            <br>Healthcare: ${d.healthcare}%`);
+            });
+
+        chartGroup.call(toolTip);
 
 
 
