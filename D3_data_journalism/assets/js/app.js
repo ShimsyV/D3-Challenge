@@ -110,7 +110,7 @@ function makeResponsive() {
                 d => d.abbr)
             ;
 
-        // Create y axis labels
+        // Create y axis label
         chartGroup.append("text")
             .attr("transform", "rotate(-90)")
             .attr("x", 0 - (chartHeight / 2) - 50)
@@ -119,6 +119,15 @@ function makeResponsive() {
             .attr("class", "axisText")
             .attr("font-weight", "Bold")
             .text("Lacks Healthcare (%)");
+
+        // Create x axis label
+        chartGroup.append("text")
+            .attr("transform", `translate(${(chartWidth / 2) - 50}, ${chartHeight + margin.top - 10})`)
+            .attr("class", "axisText")
+            .attr("font-weight", "bold")
+            .text("In Poverty (%)");
+
+
 
 
 
