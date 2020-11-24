@@ -145,8 +145,12 @@ function makeResponsive() {
             .on("mouseout", function (d) {
                 toolTip.hide(d);
             });
-    })
+    }).catch(function (error) {
+        console.log(error);
+    });
 
 }
-
+// Make browser responsive when it is called 
 makeResponsive();
+
+d3.select(window).on("resize", makeResponsive);
